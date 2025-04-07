@@ -43,7 +43,7 @@ src/
 
 ## 安裝步驟
 
-1. 克隆專案：
+1. Clone專案：
 
 ```bash
 git clone [your-repository-url]
