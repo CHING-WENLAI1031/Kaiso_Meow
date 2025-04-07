@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: pg_container
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: kaiso
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: video_platform
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
