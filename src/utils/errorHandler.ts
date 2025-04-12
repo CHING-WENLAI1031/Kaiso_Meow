@@ -4,12 +4,7 @@ interface CustomError extends Error {
   status?: number;
 }
 
-export const errorHandler = (
-  err: CustomError,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const errorHandler = (err: CustomError, req: Request, res: Response, next: NextFunction) => {
   console.error(err.stack);
 
   const statusCode = err.status || 500;
