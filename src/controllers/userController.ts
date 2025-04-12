@@ -16,11 +16,7 @@ interface LoginBody {
   password: string;
 }
 
-export const register = async (
-  req: Request<{}, any, RegisterBody>,
-  res: Response,
-  next: NextFunction
-) => {
+export const register = async (req: Request<{}, any, RegisterBody>, res: Response, next: NextFunction) => {
   try {
     const { email, password, name } = req.body;
     const userRepository = AppDataSource.getRepository(User);
@@ -61,11 +57,7 @@ export const register = async (
   }
 };
 
-export const login = async (
-  req: Request<{}, any, LoginBody>,
-  res: Response,
-  next: NextFunction
-) => {
+export const login = async (req: Request<{}, any, LoginBody>, res: Response, next: NextFunction) => {
   try {
     const { email, password } = req.body;
     const userRepository = AppDataSource.getRepository(User);

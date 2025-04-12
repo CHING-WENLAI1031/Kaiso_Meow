@@ -6,7 +6,9 @@
     "start": "node dist/app.js",
     "dev": "nodemon --exec ts-node src/app.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.{js,ts}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts}\""
   },
   "keywords": [],
   "author": "",
@@ -28,5 +30,8 @@
     "ts-node": "^10.9.2",
     "typeorm": "^0.3.22",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
   }
 }
